@@ -13,7 +13,9 @@ import {
   RightBorderInput,
   TopBorderInput,
   CircleSingleInput,
-  SquareSingleInput
+  SquareSingleInput,
+  SingleInput,
+  OtpInput
 } from 'anand-react-inputs'
 import 'anand-react-inputs/dist/index.css'
 
@@ -41,8 +43,17 @@ const App = () => {
         <SquareSingleInput placeholder='-' />
       </div>
       <br />
-      <h1>HYBRID OF INPUT </h1>
-      <div className='container'></div>
+      <h1>HYBRID OF COMPONENT </h1>
+      <div className='container'>
+        <p>
+          <b>NOTE:</b> The input component is a hybrid of the input and button
+          and they have added functionality of component.
+        </p>
+        <SingleInput variant='circle' />
+        <SingleInput variant='square' />
+        <OtpInput length={4} variant='circle' />
+        <OtpInput length={4} variant='square' />
+      </div>
     </div>
   )
 }
