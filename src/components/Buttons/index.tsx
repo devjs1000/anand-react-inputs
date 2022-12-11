@@ -4,6 +4,7 @@ const hoverButton = `
 &:hover{
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 `
 
@@ -38,11 +39,12 @@ export const CircleButton = styled.button`
 export const TriangleButton = styled.button`
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
   background-color: black;
-  color:white;
+  color: white;
   border: none;
   padding: 4px 10px;
   &:hover {
     background-color: white;
     color: black;
   }
+  cursor: pointer;
 `
