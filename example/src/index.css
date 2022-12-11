@@ -1,5 +1,6 @@
 body {
  padding: 10px;
+ background-color: rgba(240,240,240);
 }
 
 code {
@@ -8,6 +9,5 @@ code {
 }
 
 .container {
-  display: flex;
-  gap: 10px;
+  display: block;
 }

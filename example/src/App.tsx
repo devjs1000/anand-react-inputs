@@ -37,9 +37,12 @@ const App = () => {
         <RightBorderInput placeholder='enter your text here' />
         <TopBorderInput placeholder='enter your text here' />
         <BottomBorderInput placeholder='enter your text here' />
-        <CircleSingleInput placeholder='-'  />
+        <CircleSingleInput placeholder='-' />
         <SquareSingleInput placeholder='-' />
       </div>
+      <br />
+      <h1>HYBRID OF INPUT </h1>
+      <div className='container'></div>
     </div>
   )
 }
