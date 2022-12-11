@@ -15,11 +15,13 @@ import {
   CircleSingleInput,
   SquareSingleInput,
   SingleInput,
-  OtpInput
+  OtpInput,
+  CounterInput
 } from 'anand-react-inputs'
 import 'anand-react-inputs/dist/index.css'
 
 const App = () => {
+  const [value, setValue] = React.useState(0)
   return (
     <div>
       <h1>BUTTONS</h1>
@@ -51,8 +53,25 @@ const App = () => {
         </p>
         <SingleInput variant='circle' />
         <SingleInput variant='square' />
-        <OtpInput length={4} variant='circle' />
-        <OtpInput length={4} variant='square' />
+        <OtpInput
+          inputStyle={{ type: 'number' }}
+          style={{ width: '150px' }}
+          length={4}
+          variant='circle'
+        />
+        <OtpInput
+          inputStyle={{ type: 'number' }}
+          style={{ width: '150px' }}
+          length={4}
+          variant='square'
+        />
+        <CounterInput
+          style={{ width: '150px' }}
+          onChange={setValue}
+          min={0}
+          max={100}
+          value={value}
+        />
       </div>
     </div>
   )

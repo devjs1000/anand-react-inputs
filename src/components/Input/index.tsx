@@ -15,6 +15,9 @@ const staticStyle = `
   border: none;
   height: 20px;
   ${activeStyle}
+  &[type=number]{
+    appearance: none;
+  }
 `
 
 export const OutlineInput = styled.input`
