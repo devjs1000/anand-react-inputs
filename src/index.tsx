@@ -1,2 +1,3 @@
-import Test from './components/Test'
-export { Test }
+export * from './components/Test'
+export * from './components/Buttons'
+export * from './components/Input'
