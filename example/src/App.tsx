@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   CircleButton,
@@ -16,12 +16,17 @@ import {
   SquareSingleInput,
   SingleInput,
   OtpInput,
-  CounterInput
+  CounterInput,
+  ArrayInput
 } from 'anand-react-inputs'
 import 'anand-react-inputs/dist/index.css'
 
 const App = () => {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = useState(0)
+  const [array, setArray] = useState([])
+  const handleArrays = (value: any) => {
+    setArray(value)
+  }
   return (
     <div>
       <h1>BUTTONS</h1>
@@ -53,18 +58,8 @@ const App = () => {
         </p>
         <SingleInput variant='circle' />
         <SingleInput variant='square' />
-        <OtpInput
-          inputStyle={{ type: 'number' }}
-          style={{ width: '150px' }}
-          length={4}
-          variant='circle'
-        />
-        <OtpInput
-          inputStyle={{ type: 'number' }}
-          style={{ width: '150px' }}
-          length={4}
-          variant='square'
-        />
+        <OtpInput style={{ width: '150px' }} length={4} variant='circle' />
+        <OtpInput style={{ width: '150px' }} length={4} variant='square' />
         <CounterInput
           style={{ width: '150px' }}
           onChange={setValue}
@@ -72,6 +67,7 @@ const App = () => {
           max={100}
           value={value}
         />
+        <ArrayInput value={array} onChange={handleArrays} />
       </div>
     </div>
   )
